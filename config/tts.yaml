@@ -1,0 +1,36 @@
+# tts experiment config
+model:
+  model_path: "./Qwen3-8B-E2C-SFT-RL"
+  device: "cuda"
+
+data:
+  base_dir: "./data"
+  dataset: "aime2024"
+
+tts:
+  budgets: [4, 8, 16, 32]
+  temperature: 0.9
+  max_explore_tokens: 256
+  max_exec_tokens: 4096
+  max_full_tokens: 8192
+  n_clusters: 3
+  seed: 42
+
+methods:
+  - greedy_cot
+  - self_consistency
+  - e2c_select_lm_judge
+  - e2c_select_semantic_cluster
+  - e2c_sc
+  - e2c_rp
+  # - tree_of_thoughts
+  # - forest_of_thought
+
+embedding:
+  backend: "modelscope"
+  modelscope_model: "damo/nlp_gte_sentence-embedding_english-base"
+  huggingface_model: "all-mpnet-base-v2"
+
+output:
+  save_path: "./outputs/aime2024"
+  save_results: true
