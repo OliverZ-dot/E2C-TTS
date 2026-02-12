@@ -1,0 +1,15 @@
+# E2C Test-Time Scaling Experiment
+torch>=2.0.0
+transformers>=4.40.0
+datasets>=2.14.0
+numpy
+tqdm
+pyyaml
+scikit-learn>=1.0.0
+
+# e2c_select_semantic_cluster
+modelscope>=1.9.0
+sentence-transformers>=2.2.0
+
+# Optional: flash attention (faster, requires CUDA)
+# flash-attn>=2.0.0
