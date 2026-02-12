@@ -58,8 +58,9 @@ python run_tts.py --config config/tts.yaml --methods e2c_select_lm_judge e2c_sc 
 
 ## 输出
 
-结果保存在 `outputs/aime2024/tts_results.json`，包含各方法在不同 budget 下的 Acc (%) 和 Tokens (k)。
+不同 budget 下的 Acc (%) 和 Tokens (k)。
 
 ## 参考
 
 Explore–Execute Chain 论文及 Appendix A.4 实验设置。
+
